@@ -1,0 +1,16 @@
+{% extends "base.html" %}<!--Inherited from base.html -->
+{% block content %}
+<br>
+<h2> Uncompleted Assessments: </h2>
+<br>
+{% for item in data%}
+	<p> Title: <u>{{item.title}}</u></p>
+	<p> Module code: <td>{{item.module_code}}</p>
+	<p> Deadline: <td>{{item.deadline}}</p>
+	<p> Description: <td> {{item.description}}</p>
+        <form action="/uncompleted/{{item.id}}" method = "post">
+            <input type = "submit" name = "submit" value = "Mark as Completed">
+        </form>
+	<hr>
+{% endfor %}
+{% endblock %}

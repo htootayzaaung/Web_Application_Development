@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <title>To-do list</title>
+  <head>
+    <meta charset="utf-8">
+    <!--ICON with Classic University of Leeds logo-->
+    <link rel="icon" type="image/x-icon" href="../static/leeds1.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "{{url_for('static', filename ='css/styling.css')}}">
+    <link href = "https://fonts.google.com" rel = "../static/styling.css">
+    <!--All the fonts used in this project!-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  </head>
+  <body class = "background">
+  
+
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+
+    <div class="logo1">
+      <a class ="navbar-brand mx-auto" href="https://minerva.leeds.ac.uk/ultra/course"> <!--Mnerva/Courses-->
+      <img src="../static/leeds1.png" width="64" align = "left" height ="90" alt =""> <!--Clicking the picture will get to the UOL's official modules webpage-->
+      </a>
+    </div>
+
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <!--nav-bar items-->
+          <!--&nbsp is html-equivalent of a space character-->
+          <li class="nav-item"><a class="nav-link" href="https://minerva.leeds.ac.uk">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minerva&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li> <!--MINERVA LINK-->
+	        <li class="nav-item"><a class="nav-link" href="/">All Assessments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+          <li class="nav-item"><a class="nav-link" href="/create_assessments">Create Assessments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+          <li class="nav-item"><a class="nav-link" href="/completed">Completed Assessments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+          <li class="nav-item"><a class="nav-link" href="/uncompleted">Uncompleted Assessments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.gradescope.com">Gradescope Dashboard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>  <!--GRADESCOPE-DASHBOARD link!-->
+        </ul>
+     </div>
+   </nav>
+	<div>
+        {% block content %}
+        {% endblock %}
+  </div>
+    <!--Bootstrap & Jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>

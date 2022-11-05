@@ -1,0 +1,49 @@
+h2
+{
+    font-family: 'Permanent Marker', cursive;
+    padding: 2rem;
+    max-width: 14rem;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    max-width: 30rem;
+}
+
+p
+{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 30px;
+}
+
+li
+{
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    color: white;
+}
+
+.background
+{
+    background-image:url('../background.jpg');
+    background-size:1920px 1080px;
+}
+
+#title
+{
+    width: 750px;
+}
+
+#module_code
+{
+    width: 750px;
+}
+
+#deadline
+{
+    width: 750px;
+}
+
+#description
+{
+    width: 750px;
+    height: 250px;
+}

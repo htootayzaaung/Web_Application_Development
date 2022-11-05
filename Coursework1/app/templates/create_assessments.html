@@ -1,0 +1,33 @@
+{% extends "base.html" %} <!--Inherited from base.html -->
+{% block content %}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+<br>
+<h2>Create Assessments!</h2>
+<br>
+<form action = "" method = "post" name = "create assessments"> 
+    {{form.hidden_tag()}}
+    <left>
+        <p>&nbsp;&nbsp;&nbsp;<u>Title</u></p>
+        <br><p>&nbsp;&nbsp;&nbsp;{{form.title}}</p></br>
+
+        <p>&nbsp;&nbsp;&nbsp;<u>Module</u></p>
+        <br><p>&nbsp;&nbsp;&nbsp;{{form.module_code}}</p></br>
+
+        <p>&nbsp;&nbsp;&nbsp;<u>Deadline</u></p>
+        <br><p>&nbsp;&nbsp;&nbsp;{{form.deadline}}</p></br>
+
+        <p>&nbsp;&nbsp;&nbsp;<u>Description</u></p>
+        <br><p>&nbsp;&nbsp;&nbsp;{{form.description}}</p></br>
+
+        <p>&nbsp;&nbsp;&nbsp;{{form.submit}}</p>
+    </left>
+</form>
+{% endblock %}
