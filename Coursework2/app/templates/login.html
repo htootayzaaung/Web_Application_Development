@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="POST">
+    <br>
+    <div align="center">
+    {# This hidden_tag is a CSRF security feature. #}
+    {{ form.hidden_tag() }}
+    <br>
+    {{ form.email.label }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ form.email() }}<br><br>
+    {{ form.password.label }}&nbsp;&nbsp;&nbsp;{{ form.password() }}<br><br>
+    <div align="center">{{ form.submit() }}</div>
+    </div>
+</form>
+{% endblock %}
